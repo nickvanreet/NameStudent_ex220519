@@ -1,0 +1,3 @@
+question5query2
+
+SELECT count(exon.exon_id) FROM exon JOIN exon_transcript ON exon_transcript.exon_id=exon.exon_id JOIN transcript ON transcript.transcript_id=exon_transcript.transcript_id JOIN gene ON transcript.gene_id=gene.gene_id WHERE gene.chromosome=9;

@@ -1,0 +1,4 @@
+question 4 query
+
+SELECT gene.gene_name, (gene.seq_region_end - gene.seq_region_start) as length, gene.seq_region_start, gene.seq_region_end FROM gene ORDER BY length LIMIT 1;
+

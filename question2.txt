@@ -1,0 +1,17 @@
+question2
+
+### UNF            
+researchlabprojects (P#, Pn, Pd, L#, Ln, [R#, Rdesc, Rs]) with P# : personnel number, Pn: name, Pd: date-of-birth, L#, Lab code, Ln: lab name, R# research code, Rdesc: research description and R# :research supervisor 
+
+###1NF In the first normal form, all repeating groups are extracted into tables, fields are given unique names and a primairy key is chosen for each table.
+personnelinlab (P#, Pn, Pd, L#, Ln) using P#, or Personnel number as primairy key, assuming nobody works in 2 labs at the same time
+researchproject(P#, R#, Rdescr, Rs) using P# and R#, or Research code, as composite key.
+
+###2NF
+personnel (P#, Pn, Pd, L#), with P# as primary key
+lab(L#, Ln), with L# as primairy key
+research work (R#, P#), with R# as primary key
+project (R#, Rdescr,P#), with R# and P# as composite key (I assume the Rs is also personnel)
+
+###3NF
+same as 2NF

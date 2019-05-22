@@ -1,0 +1,4 @@
+question6query
+
+db.getCollection('mongodb').find({"method_of_admission.0":"TABLET;BUCCAL, SUBLINGUAL"}, {drug:1})
+
